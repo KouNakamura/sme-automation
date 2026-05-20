@@ -12,7 +12,7 @@ CW_BASE = 'https://www.chatwork.com/#!rid'
 TOKEN = None  # 起動時に資格情報マネージャーから取得
 
 # ブレイン営業チャンネル（メインの営業共有ch）
-EIGYO_ROOM_ID = YOUR_SALES_ROOM_ID
+SALES_ROOM_ID = YOUR_SALES_ROOM_ID
 
 # 重要キーワード（これを含むメッセージは強調）
 ALERT_WORDS = [
@@ -82,9 +82,9 @@ def is_trouble(text):
 def room_url(room_id):
     return f'{CW_BASE}{room_id}'
 
-def check_eigyo_channel(token, since_ts):
+def check_sales_channel(token, since_ts):
     """営業チャンネルのトラブル状況を専用チェック"""
-    rid = EIGYO_ROOM_ID
+    rid = SALES_ROOM_ID
     url = room_url(rid)
     print(f'\n■ 営業チャンネル専用チェック')
     print(f'  URL: {url}')
@@ -150,7 +150,7 @@ def run_check():
             print(f'  [{room}] {body}  期限:{due}')
 
     # 営業チャンネル専用チェック（常に実行）
-    check_eigyo_channel(token, since_ts)
+    check_sales_channel(token, since_ts)
 
     # 前営業日以降にアクティブなルーム
     rooms = cw_get('/rooms', token)

@@ -3,7 +3,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 import xlrd
 from datetime import date
 
-wb = xlrd.open_workbook(r'\\YOUR_NAS_IP\eigyo\01_請求関連\☆売上\売掛一覧.xls')
+wb = xlrd.open_workbook(r'\\YOUR_NAS_IP\YOUR_FOLDER2\01_billing\sales\accounts_receivable.xls')
 ws = wb.sheet_by_name('Sheet1')
 
 def xl_date(val):

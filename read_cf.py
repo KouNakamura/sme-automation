@@ -3,7 +3,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 import openpyxl
 from datetime import datetime
 
-CF_PATH = r'\\YOUR_NAS_IP\keiri\01.キャッシュフロー\キャッシュフロー改定(2026.5.7).xlsx'
+CF_PATH = r'\\YOUR_NAS_IP\YOUR_FOLDER\01.cashflow\cashflow_YYYYMMDD.xlsx'
 wb = openpyxl.load_workbook(CF_PATH, data_only=True)
 ws = wb['キャッシュ表_予定【融資有】']
 

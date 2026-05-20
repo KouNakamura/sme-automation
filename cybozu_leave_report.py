@@ -20,7 +20,7 @@ from selenium.webdriver.support import expected_conditions as EC
 BASE         = "https://YOUR_COMPANY.cybozu.com"
 EDGE_DRIVER  = os.path.join(os.environ["TEMP"], "edgedriver_mf", "msedgedriver.exe")
 EDGE_PROFILE = os.path.join(os.environ["USERPROFILE"], ".config", "cybozu_profile")
-NAS_REPORT   = r"\\YOUR_NAS_IP\keiri\99.claude連携\reports\mf_attendance"
+NAS_REPORT   = r"\\YOUR_NAS_IP\YOUR_FOLDER\99.automation\reports\attendance"
 
 # サイボウズのフォームID
 FID_LEAVE    = 153    # 休暇申請/遅早届

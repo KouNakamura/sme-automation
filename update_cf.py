@@ -6,7 +6,7 @@ from collections import defaultdict
 from openpyxl.styles import Font
 
 # 1. 売掛一覧から4月発行分を入金予定日別に集計
-wb_u = xlrd.open_workbook(r'\\YOUR_NAS_IP\eigyo\01_請求関連\☆売上\売掛一覧.xls')
+wb_u = xlrd.open_workbook(r'\\YOUR_NAS_IP\YOUR_FOLDER2\01_billing\sales\accounts_receivable.xls')
 ws_u = wb_u.sheet_by_name('Sheet1')
 
 def xl_date(val):
@@ -47,8 +47,8 @@ print(f'  6月20日                : {jun20:>12,}円')
 print(f'  6月25日                : {jun25:>12,}円')
 
 # 2. ファイルパス（バックアップから再作成）
-CF_BACKUP = r'\\YOUR_NAS_IP\keiri\01.キャッシュフロー\キャッシュフローold\キャッシュフロー改定(2026.5.7).xlsx'
-CF_NEW    = r'\\YOUR_NAS_IP\keiri\01.キャッシュフロー\キャッシュフロー改定(2026.5.19).xlsx'
+CF_BACKUP = r'\\YOUR_NAS_IP\YOUR_FOLDER\01.cashflow\cashflow_backup\cashflow_YYYYMMDD.xlsx'
+CF_NEW    = r'\\YOUR_NAS_IP\YOUR_FOLDER\01.cashflow\cashflow_new_YYYYMMDD.xlsx'
 
 # 推測値読み取り用（data_only=Trueで計算済み値を取得）
 wb_data = openpyxl.load_workbook(CF_BACKUP, data_only=True)

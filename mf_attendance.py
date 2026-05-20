@@ -19,7 +19,7 @@ from pathlib import Path
 
 # ─── 設定 ────────────────────────────────────────────
 MF_BASE      = 'https://attendance.moneyforward.com'
-NAS_SAVE_DIR = r'\\YOUR_NAS_IP\keiri\99.claude連携\reports\mf_attendance'
+NAS_SAVE_DIR = r'\\YOUR_NAS_IP\YOUR_FOLDER\99.automation\reports\attendance'
 CW_ROOM_ID   = YOUR_SALES_ROOM_ID
 CW_BASE      = 'https://api.chatwork.com/v2'
 
