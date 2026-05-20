@@ -1,0 +1,18 @@
+# デバッグ・一時ファイル
+_tmp_*.py
+*_debug*.py
+*_explore*.py
+claude_migration_backup/
+
+# 固有情報を含む可能性のあるファイル
+*.pkl
+*.json
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 経歴書など個人情報ファイル
+update_*_resume.py
