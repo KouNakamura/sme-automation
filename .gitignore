@@ -16,3 +16,7 @@ __pycache__/
 
 # 経歴書など個人情報ファイル
 update_*_resume.py
+
+# ローカル専用（実パス含む・公開禁止）
+restore_local_paths.py
+config_local.py
